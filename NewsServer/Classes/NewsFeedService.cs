@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace NewsServer.Classes
 {
@@ -42,7 +43,7 @@ namespace NewsServer.Classes
                 geoFeeds.AddRange(geoFeedItems);
             }
 
-            return geoFeeds;
+            return geoFeeds.OrderByDescending(d => d.Date).ToList();
         }
     }
 }

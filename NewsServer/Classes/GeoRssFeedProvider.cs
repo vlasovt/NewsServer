@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -15,6 +16,8 @@ namespace NewsServer.Classes
         private const string USER_AGENT_NAME = "User-Agent";
         private const string USER_AGENT_VALUE = "Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0";
         private const string GEORSS_CONVERTER = "http://api.geonames.org/rssToGeoRSS?feedUrl={0}&username=ascold";
+
+        private const string DATE_PARSE_FORMAT = "ddd, dd MMM yyyy HH:mm";
 
         private HttpClient _httpClient;
 
@@ -63,6 +66,7 @@ namespace NewsServer.Classes
                 var docRoot = feedDoc.Root;
                 var channel = docRoot.Descendants("channel").FirstOrDefault();
                 var channelTitle = channel.Element("title")?.Value;
+                var channelLink = channel.Element("link")?.Value;
                 var items = docRoot.Descendants("item");
 
                 var feedItems = new List<GeoFeedItem>();
@@ -76,11 +80,29 @@ namespace NewsServer.Classes
                         continue;
                     }
 
+                    var description = item.Element("description")?.Value;
+
+                    if(!string.IsNullOrEmpty(description) 
+                        && description.IndexOf('<') > 0)
+                    {
+                        description = description.Substring(0,description.IndexOf('<'));
+                    }
+
+                    var dateString = item.Element("pubDate")?.Value;
+                    DateTime? pubDate = null;
+
+                    if (!string.IsNullOrEmpty(dateString))
+                    {
+                        pubDate = DateTime.Parse(dateString, CultureInfo.CurrentCulture);
+                    }
+
                     var geoFeedItem = new GeoFeedItem
                     {
                         ChannelTitle = channelTitle,
+                        ChannelLink = channelLink,
+                        Date = pubDate.HasValue? pubDate: null,
                         Title = item.Element("title")?.Value,
-                        Description = item.Element("description")?.Value,
+                        Description = description,
                         Link = item.Element("link")?.Value,
                         Coordinates = coordinates
                     };

@@ -2,5 +2,9 @@
   {
     "url": "http://feeds.reuters.com/reuters/worldNews",
     "type": "rss"
+  },
+  {
+    "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+    "type": "rss"
   }
 ]
