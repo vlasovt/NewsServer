@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,7 @@ namespace NewsServer
             services.AddScoped<INewsFeedService, NewsFeedService>();
             services.AddScoped<IFeedDownloader, FeedDownloader>();
             services.AddScoped<IFeedProvider, GeoRssFeedProvider>();
+            services.AddScoped(typeof(IEqualityComparer<double[]>), typeof(DoubleValueArrayComparer));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

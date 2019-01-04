@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace NewsServer.Classes
 {
-    public class GeoRssFeedProvider: IFeedProvider
+    public class FeedClassifier: IFeedClassifier
     {
         private const string ACCEPT_HEADER_NAME = "Accept";
         private const string ACCEPT_HEADER_VALUE = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";

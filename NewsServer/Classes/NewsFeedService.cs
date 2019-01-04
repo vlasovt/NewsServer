@@ -11,11 +11,15 @@ namespace NewsServer.Classes
         private IFeedDownloader _feedDownloader;
         private readonly IHostingEnvironment environment;
 
+        private readonly IEqualityComparer<double[]> _arrayComparer;
+
         public NewsFeedService(IFeedDownloader feedDownloader, 
-                                IHostingEnvironment environment)
+                                IHostingEnvironment environment,
+                                IEqualityComparer<double[]> arrayComparer)
         {
             _feedDownloader = feedDownloader;
             this.environment = environment;
+            _arrayComparer = arrayComparer;
         }
 
         public List<GeoFeedItem> GetNewsFeed()
@@ -41,6 +45,21 @@ namespace NewsServer.Classes
             {
                 var geoFeedItems = feedReader.GetFeedItems(link.Url, link.FeedType).Result;
                 geoFeeds.AddRange(geoFeedItems);
+            }
+
+            var groups = geoFeeds.GroupBy(g => g.Coordinates, _arrayComparer);
+
+            foreach (var group in groups.Where(g => g.Count() > 1))
+            {
+                var counter = 0;
+
+                foreach (var item in group)
+                {
+                    item.Coordinates[1] += counter == 0
+                                                ? counter
+                                                : (double)counter/10;
+                    counter++;
+                }
             }
 
             return geoFeeds.OrderByDescending(d => d.Date).ToList();
