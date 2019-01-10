@@ -1,0 +1,24 @@
+icons8-spy-48: <a href="https://icons8.com/icon/23317/spy">Spy icon by Icons8</a>
+
+icons8-explosion-48: <a href="https://icons8.com/icon/17899/explosion">Explosion icon by Icons8</a>
+
+icons8-tank-48: <a href="https://icons8.com/icon/17931/tank">Tank icon by Icons8</a>
+
+icons8-fires-48: <a href="https://icons8.com/icon/15364/fires">Fires icon by Icons8</a>
+
+icons8-fire-truck-48: <a href="https://icons8.com/icon/15149/fire-truck">Fire Truck icon by Icons8</a>
+
+icons8-elections-48: <a href="https://icons8.com/icon/23429/elections">Elections icon by Icons8</a>
+
+icons8-region-48: <a href="https://icons8.com/icon/19608/region">Region icon by Icons8</a>
+
+icons8-strike-48: <a href="https://icons8.com/icon/13090/strike">Strike icon by Icons8</a>
+
+icons8-hospital-48: <a href="https://icons8.com/icon/11934/hospital">Hospital icon by Icons8</a>
+
+icons8-pirates-of-the-caribbean-48: <a href="https://icons8.com/icon/20567/pirates-of-the-caribbean">Pirates of the Caribbean icon by Icons8</a>
+
+
+
+
+

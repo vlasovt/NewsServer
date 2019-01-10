@@ -7,15 +7,20 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     feed: null,
+    loadingFeeds: false,
   },
   mutations: {
     updateFeed(state, feed) {
-      // eslint-disable-next-line no-param-reassign
-      state.feed = feed;
+      if (feed && feed.length > 0) {
+        state.feed = feed;
+      }
+      state.loadingFeeds = false;
     },
   },
   actions: {
-    getFeed({ commit }) {
+    getFeed({ commit, state }) {
+      // eslint-disable-next-line no-param-reassign
+      state.loadingFeeds = true;
       axios.get('/api/news')
         .then(result => commit('updateFeed', result.data))
         .catch(console.error);

@@ -15,7 +15,7 @@
         <l-icon
           :icon-size="[48, 48]"
           :icon-anchor="[16, 37]">
-          <img src="../assets/helmet.png" style="height: 32px; width: 32px;" />
+          <img src="../assets\markers\icons8-region-48.png" style="height: 32px; width: 32px;" />
         </l-icon>
          <l-popup>
            <a class="title is-6" :href="feedItem.link" target="_blank">

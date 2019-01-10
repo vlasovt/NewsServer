@@ -7,7 +7,9 @@
       </p>
     </header>
     <div class="card-content">
-      <strong>{{feedItem.date | formatDate}}: </strong>{{feedItem.description}} <strong>{{feedItem.channelTitle}}</strong>
+      <strong>{{feedItem.date | formatDate}}:
+         </strong>{{feedItem.description}}
+          <strong>{{feedItem.channelTitle}}</strong>
     </div>
   </div>
 </a>

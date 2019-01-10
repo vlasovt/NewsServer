@@ -23,6 +23,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NewsMapClient", "NewsMapCli
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "55778"
+		SlnRelativePath = "NewsMapClient\"
 	EndProjectSection
 EndProject
 Global
@@ -36,7 +37,6 @@ Global
 		{19DE35D8-8DC8-477E-8F67-A83B3C115462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19DE35D8-8DC8-477E-8F67-A83B3C115462}.Release|Any CPU.Build.0 = Release|Any CPU
 		{683EDB92-C0E1-4A3E-A4D0-87CC5314F56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{683EDB92-C0E1-4A3E-A4D0-87CC5314F56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{683EDB92-C0E1-4A3E-A4D0-87CC5314F56F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{683EDB92-C0E1-4A3E-A4D0-87CC5314F56F}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection

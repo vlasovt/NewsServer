@@ -1,0 +1,19 @@
+[
+  {
+    "url": "http://feeds.reuters.com/reuters/worldNews",
+    "type": "rss"
+  },
+  {
+    "url": "http://feeds.reuters.com/reuters/AFRICATopNews",
+    "type": "rss"
+  },
+  {
+    "url": "http://feeds.reuters.com/reuters/INsouthAsiaNews",
+    "type": "rss"
+  },
+  {
+    "url": "https://www.rferl.org/api/z$qimetkiy",
+    "type": "rss"
+  }
+]
+

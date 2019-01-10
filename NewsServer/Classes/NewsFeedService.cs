@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -62,7 +63,7 @@ namespace NewsServer.Classes
                 }
             }
 
-            return geoFeeds.OrderByDescending(d => d.Date).ToList();
+            return geoFeeds.Where(i=> i.Date > DateTime.Now.AddDays(-1)).OrderByDescending(d => d.Date).ToList();
         }
     }
 }

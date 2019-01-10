@@ -1,18 +1,26 @@
 <template>
 <div class="feed-container">
-  <header class="panel-header"><strong>News Feed</strong> ({{feedItems.length}})</header>
+  <header class="panel-header">
+    <strong>News Feed</strong> ({{feedItems.length}})
+    <img v-if="loading" class="is-pulled-right small-loader"
+     src="../assets/loaders/Rolling-1s-24px.svg" />
+  </header>
   <div class="feed-body">
     <news-card
     v-for="(feedItem,index) in feedItems"
     :key="index"
     :feedItem="feedItem"/>
+    <div class="big-loader">
+       <img ref="bigLoader" v-if="feedItems.length == 0"
+        src="../assets/loaders/Ripple-1s-143px.svg" />
+    </div>
   </div>
 </div>
 </template>
 
 <script>
 
-import NewsCard from '@/components/NewsCard.vue';
+import NewsCard from './NewsCard.vue';
 
 export default {
   name: 'news-feed',
@@ -21,7 +29,7 @@ export default {
       newsBody: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
     };
   },
-  props: ['feedItems'],
+  props: ['feedItems', 'loading'],
   components: { NewsCard },
 };
 </script>
@@ -45,5 +53,12 @@ header {
     flex-grow: 1;
     overflow: auto;
     min-height: 2em;
+}
+.small-loader {
+  margin-top: 2%;
+}
+.big-loader {
+ margin-top: 50%;
+ text-align: center;
 }
 </style>
