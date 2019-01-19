@@ -9,18 +9,20 @@ namespace NewsServer.Classes
 {
     public class NewsFeedService: INewsFeedService
     {
-        private IFeedDownloader _feedDownloader;
+        private readonly IFeedDownloader _feedDownloader;
+        private readonly IFeedClassifier _feedClassifier;
         private readonly IHostingEnvironment environment;
-
         private readonly IEqualityComparer<double[]> _arrayComparer;
 
         public NewsFeedService(IFeedDownloader feedDownloader, 
                                 IHostingEnvironment environment,
-                                IEqualityComparer<double[]> arrayComparer)
+                                IEqualityComparer<double[]> arrayComparer,
+                                IFeedClassifier feedClassifier)
         {
             _feedDownloader = feedDownloader;
             this.environment = environment;
             _arrayComparer = arrayComparer;
+            _feedClassifier = feedClassifier;
         }
 
         public List<GeoFeedItem> GetNewsFeed()
@@ -58,12 +60,20 @@ namespace NewsServer.Classes
                 {
                     item.Coordinates[1] += counter == 0
                                                 ? counter
-                                                : (double)counter/10;
+                                                : (double)counter / 10;
                     counter++;
                 }
             }
 
-            return geoFeeds.Where(i=> i.Date > DateTime.Now.AddDays(-1)).OrderByDescending(d => d.Date).ToList();
+            // select only the last 24hs news
+            var latestNews = geoFeeds.Where(i => i.Date > DateTime.Now.AddDays(-1)).OrderByDescending(d => d.Date).ToList();
+
+            foreach (var item in latestNews)
+            {
+                _feedClassifier.ClassifyNewsItem(item);
+            }
+
+            return latestNews;
         }
     }
 }

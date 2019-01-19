@@ -25,6 +25,7 @@ namespace NewsServer
             services.AddScoped<INewsFeedService, NewsFeedService>();
             services.AddScoped<IFeedDownloader, FeedDownloader>();
             services.AddScoped<IFeedProvider, GeoRssFeedProvider>();
+            services.AddScoped<IFeedClassifier, FeedClassifier>();
             services.AddScoped(typeof(IEqualityComparer<double[]>), typeof(DoubleValueArrayComparer));
         }
 

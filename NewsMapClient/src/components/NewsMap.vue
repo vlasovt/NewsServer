@@ -15,7 +15,7 @@
         <l-icon
           :icon-size="[48, 48]"
           :icon-anchor="[16, 37]">
-          <img src="../assets\markers\icons8-region-48.png" style="height: 32px; width: 32px;" />
+          <img :src="iconMap[feedItem.category]" style="height: 32px; width: 32px;" />
         </l-icon>
          <l-popup>
            <a class="title is-6" :href="feedItem.link" target="_blank">
@@ -41,7 +41,7 @@ import {
   LPopup,
 } from 'vue2-leaflet';
 
-// import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster';
+import markerIcons from '../assets/markerIcons';
 
 export default {
   name: 'news-map',
@@ -63,6 +63,7 @@ export default {
         maxZoom: 10,
         imagePath: 'img',
       },
+      iconMap: markerIcons,
     };
   },
   props: ['feedItems'],

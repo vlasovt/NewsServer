@@ -18,7 +18,36 @@ icons8-hospital-48: <a href="https://icons8.com/icon/11934/hospital">Hospital ic
 
 icons8-pirates-of-the-caribbean-48: <a href="https://icons8.com/icon/20567/pirates-of-the-caribbean">Pirates of the Caribbean icon by Icons8</a>
 
+icons8-assault-rifle-48: <a href="https://icons8.com/icon/17886/assault-rifle">Assault Rifle icon by Icons8</a>
 
+icons8-fist-48: <a href="https://icons8.com/icon/17653/fist">Fist icon by Icons8</a>
 
+icons8-parliament-48: <a href="https://icons8.com/icon/12006/parliament">Parliament icon by Icons8</a>
 
+icons8-factory-breakdown-48: <a href="https://icons8.com/icon/12130/factory-breakdown">Factory Breakdown icon by Icons8</a>
 
+icons8-tornado-48: <a href="https://icons8.com/icon/15367/tornado">Tornado icon by Icons8</a>
+
+<a href="https://icons8.com/icon/39084/anonymous-mask">Anonymous Mask icon by Icons8</a>
+
+<a href="https://icons8.com/icon/14880/save-the-children">Save the Children icon by Icons8</a>
+
+<a href="https://icons8.com/icon/14804/user-groups">User Groups icon by Icons8</a>
+
+<a href="https://icons8.com/icon/12208/handshake">Handshake icon by Icons8</a>
+
+<a href="https://icons8.com/icon/13506/racism">Racism icon by Icons8</a>
+
+<a href="https://icons8.com/icon/55207/earth-planet">Earth Planet icon by Icons8</a>
+
+<a href="https://icons8.com/icon/32747/cash-in-hand">Cash in Hand icon by Icons8</a>
+
+<a href="https://icons8.com/icon/11908/courthouse">Courthouse icon by Icons8</a>
+
+<a href="https://icons8.com/icon/58058/united-nations">United Nations icon by Icons8</a>
+
+<a href="https://icons8.com/icon/55405/low-price">Low Price icon by Icons8</a>
+
+<a href="https://icons8.com/icon/12129/factory">Factory icon by Icons8</a>
+
+<a href="https://icons8.com/icon/17630/us-capitol">US Capitol icon by Icons8</a>
