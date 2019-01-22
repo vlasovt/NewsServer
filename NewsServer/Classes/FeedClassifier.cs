@@ -37,6 +37,8 @@ namespace NewsServer.Classes
             econ_develop,
             human_crisis,
             justice,
+            crime,
+            politics,
             unrecognized
         };
 

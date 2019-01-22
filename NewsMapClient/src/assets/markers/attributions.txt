@@ -51,3 +51,7 @@ icons8-tornado-48: <a href="https://icons8.com/icon/15367/tornado">Tornado icon 
 <a href="https://icons8.com/icon/12129/factory">Factory icon by Icons8</a>
 
 <a href="https://icons8.com/icon/17630/us-capitol">US Capitol icon by Icons8</a>
+
+<a href="https://icons8.com/icon/11928/crime">Crime icon by Icons8</a>
+
+<a href="https://icons8.com/icon/84302/man-face">Man face icon by Icons8</a>

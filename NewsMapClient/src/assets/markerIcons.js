@@ -20,5 +20,7 @@ export default {
   econ_develop: require('../assets/markers/icons8-factory-48.png'),
   human_crisis: require('../assets/markers/icons8-united-nations-48.png'),
   justice: require('../assets/markers/icons8-courthouse-48.png'),
+  crime: require('../assets/markers/icons8-crime-48.png'),
+  politics: require('../assets/markers/icons8-man-face-48.png'),
   unrecognized: require('../assets/markers/icons8-region-48.png'),
 };
